@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BioCerem – Hear what your crops are saying</title>
+<meta name="description" content="BioCerem combines plant biosensors, soil probes and a live dashboard for precision farming.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="nav"><a class="logo" href="#top">🌱 BioCerem</a>
+<nav><a href="#problem">Problem</a><a href="#how">How it works</a><a href="#business">Business</a><a href="#stack">Tech</a><a href="#future">Future</a></nav>
+<a class="btn sm" href="#contact">Get early access</a></header>
+<main id="top">
+<section class="hero"><div class="blob b1"></div><div class="blob b2"></div>
+<div class="hero-text"><p class="pill">Precision agriculture, powered by biosensors</p>
+<h1>Your crops are talking. <span class="grad">Finally, you can listen.</span></h1>
+<p class="lead">BioCerem reads signals straight from the plant and soil, then turns them into health scores, risk alerts and irrigation advice on one simple dashboard.</p>
+<div class="cta"><a class="btn" href="#how">See how it works</a><a class="btn ghost" href="#contact">Talk to us</a></div></div>
+<div class="dash" aria-label="Live demo dashboard"><div class="dash-top"><b>Field Node 07 · Tomato block</b><span class="live">Live demo</span></div>
+<div class="score"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="track"/><circle id="ring" cx="60" cy="60" r="52" class="ring"/></svg><div><strong id="score">87</strong><small>Plant health</small></div></div>
+<div class="metrics">
+<div><small>Sap pH</small><b id="ph">6.2</b></div><div><small>Soil moisture</small><b id="moist">41%</b></div>
+<div><small>Nitrogen · P · K</small><b id="npk">32·18·24</b></div><div><small>Soil temp</small><b id="temp">26°C</b></div></div>
+<div class="alert" id="alert">✅ All good. Next irrigation in 14 hours.</div>
+<button class="btn sm ghost" id="stress">Simulate drought stress</button></div></section>
+
+<div class="marquee"><div><span>Plant sap pH</span><span>Soil NPK</span><span>Moisture stress</span><span>LoRaWAN</span><span>Disease alerts</span><span>Irrigation advice</span><span>Plant sap pH</span><span>Soil NPK</span><span>Moisture stress</span><span>LoRaWAN</span><span>Disease alerts</span><span>Irrigation advice</span></div></div>
+
+<section id="problem" class="sec"><h2>Farming on guesswork costs real money</h2>
+<div class="bento">
+<article class="card"><h3>Blind spots</h3><p>Generic weather data hides crop disease and poor soil management until it is visible and too late.</p></article>
+<article class="card hot"><h3>Wasted resources</h3><p>Without live insight, farmers over-irrigate and overuse fertilizer. Soil health drops and costs rise.</p></article>
+<article class="card"><h3>Scattered data</h3><p>Biological, soil and weather data live in separate tools. Nobody gets the full picture.</p></article></div></section>
+
+<section id="how" class="sec alt"><h2>One system from root to report</h2>
+<p class="sub">BioCerem is an integrated multi-sensor ecosystem. Here is the path every reading takes.</p>
+<ol class="steps">
+<li><h3>Sense</h3><p>A field node carries biosensors (plant sap pH, moisture stress) and soil probes (NPK, temperature, moisture).</p></li>
+<li><h3>Send</h3><p>A low-power LoRaWAN link carries data across the farm to a central gateway.</p></li>
+<li><h3>Process</h3><p>The cloud stores time-series data and runs machine learning models for risk prediction.</p></li>
+<li><h3>Act</h3><p>The web dashboard shows health scores, automated alerts and irrigation recommendations.</p></li></ol></section>
+
+<section class="sec"><h2>Why it beats satellite-only tools</h2>
+<div class="bento two">
+<article class="card"><h3>Granular data</h3><p>Biosensors give direct, real-time physiology from the plant itself.</p></article>
+<article class="card"><h3>All-in-one dashboard</h3><p>Soil, plant and environment in a single view.</p></article>
+<article class="card"><h3>Proactive, not reactive</h3><p>Spot stress early and act before yield is lost.</p></article>
+<article class="card warn"><h3>Honest limitations</h3><p>Upfront cost can be high for small farms, rural connectivity can be patchy, and sensors in harsh soil need periodic maintenance.</p></article></div></section>
+
+<section id="business" class="sec alt"><h2>Business model and customers</h2>
+<div class="bento">
+<article class="card"><h3>Hardware sales</h3><p>Biosensor kits for commercial farms and cooperatives (B2B and B2C).</p></article>
+<article class="card"><h3>SaaS tiers</h3><p>Subscription dashboard with predictive analytics and AI disease forecasting.</p></article>
+<article class="card"><h3>Data insights</h3><p>Anonymized regional agronomic data for research firms and crop insurers.</p></article></div>
+<div class="chips"><span>Commercial and precision farmers</span><span>Agronomists and agri-consultants</span><span>Agricultural cooperatives</span></div>
+<p class="sub">Feasible today: IoT is mature, biosensors are getting cheaper, and savings on water, fertilizer and crop loss repay the hardware within a few harvest cycles.</p></section>
+
+<section id="stack" class="sec"><h2>Built with proven tech</h2>
+<div class="bento two">
+<article class="card"><h3>Hardware</h3><p>ESP32 or Arduino, LoRaWAN or NB-IoT</p></article>
+<article class="card"><h3>Backend</h3><p>Node.js or Python (FastAPI / Django)</p></article>
+<article class="card"><h3>Dashboard</h3><p>React.js or Vue.js</p></article>
+<article class="card"><h3>Data and cloud</h3><p>InfluxDB, PostgreSQL, AWS or GCP, Scikit-learn</p></article></div></section>
+
+<section id="future" class="sec alt"><h2>What comes next</h2>
+<div class="bento">
+<article class="card"><h3>Predictive disease maps</h3><p>Forecast outbreaks before symptoms show on the crop.</p></article>
+<article class="card"><h3>Drone integration</h3><p>Pair ground biosensors with NDVI aerial imaging.</p></article>
+<article class="card"><h3>Mobile apps</h3><p>Android and iOS with offline sync and SMS alerts.</p></article></div>
+<div class="impact"><div><b data-n="30">0</b><span>% less water, target</span></div><div><b data-n="25">0</b><span>% less fertilizer, target</span></div><div><b data-n="4">0</b><span>sensor types in one node</span></div></div></section>
+
+<section id="contact" class="cta-band"><h2>Replace guesswork with insight.</h2>
+<p>BioCerem protects crop health and the environment while helping farmers earn more.</p>
+<a class="btn" href="mailto:hello@biocerem.example">Get early access</a></section></main>
+<footer>© 2026 BioCerem · Sustainable, high-yield smart farming</footer>
+<script src="script.js"></script></body></html>
